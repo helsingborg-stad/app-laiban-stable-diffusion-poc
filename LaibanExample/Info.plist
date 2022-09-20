@@ -4,5 +4,21 @@
 <dict>
 	<key>Config</key>
 	<string>$(CONFIG)</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Internet access</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Hämtar korrdinater</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Hämtar korrdinater</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Används för röstkommandon</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Används för röstkommandon</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
 </dict>
 </plist>
