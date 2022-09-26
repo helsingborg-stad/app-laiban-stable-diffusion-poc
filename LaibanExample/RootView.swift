@@ -17,9 +17,9 @@ struct RootView : View {
     var dashboardLayout:[[LBDashboardItem]] {
         let a = appState
         return [
-            [a.timeService,         a.calendarService,  a.singalongService,     a.foodService,      a.foodWasteService  ],
-            [a.outdoorsService,     a.recreationService,a.activityService,      a.instagramService, a.myCustomService   ],
-            [a.memoryGameService,   a.undpService,      a.trashMonsterService,  a.noticeboardService                    ]
+            [a.timeService,         a.calendarService,  a.singalongService,     a.foodService,      a.foodWasteService    ],
+            [a.outdoorsService,     a.recreationService,a.activityService,      a.instagramService, /*a.myCustomService*/ ],
+            [a.memoryGameService,   a.undpService,      a.trashMonsterService,  a.noticeboardService                      ]
         ]
     }
     var config: LBRootViewConfig {
@@ -45,13 +45,13 @@ struct RootView : View {
                 case LBViewIdentity.trashmonster:    TrashMonstersHomeViewIcon()
                 case LBViewIdentity.noticeboard:     NoticeboardHomeViewIcon()
                 case LBViewIdentity.undpinfo:        UNDPHomeViewIcon()
-                case LBViewIdentity.myCustomService: MyCustomViewIcon()
+                //case LBViewIdentity.myCustomService: MyCustomViewIcon()
                 default: EmptyView()
                 }
             }
             .actionBar { item, properties in
                 switch item {
-                case LBViewIdentity.time:            TimeActionBarView(actionBarProperties: properties)
+                //case LBViewIdentity.time:            TimeActionBarView(actionBarProperties: properties)
                 case LBViewIdentity.food:            FoodActionBarView(properties: properties)
                 default: Spacer()
                 }
@@ -73,14 +73,13 @@ struct RootView : View {
                 case LBViewIdentity.trashmonster:    TrashMontersView()
                 case LBViewIdentity.undpinfo:        UNDPInfoView()
                 case LBViewIdentity.home:            HomeView(publicCalendar: appState.publicCalendar, activityService: appState.activityService)
-                case LBViewIdentity.myCustomService: MyCustomView(service: appState.myCustomService)
+                //case LBViewIdentity.myCustomService: MyCustomView(service: appState.myCustomService)
                 default: EmptyView()
                 }
             }
             .onShouldDisable {
                 return appState.languageService.data.voiceCancellable == false
             }
-            .inactivityTimeInterval(appState.returnToHomeScreenService.data.timeInterval)
             .onLangaugeChanged { locale in
                 self.appState.currentLanguage = locale
             }
