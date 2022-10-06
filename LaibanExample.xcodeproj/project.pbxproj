@@ -479,8 +479,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/helsingborg-stad/spm-laiban";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 		0E77B53528D4B53E00C3044C /* XCRemoteSwiftPackageReference "spm-daisy" */ = {
