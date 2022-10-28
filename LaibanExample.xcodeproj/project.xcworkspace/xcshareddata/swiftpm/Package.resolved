@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/helsingborg-stad/spm-laiban",
       "state" : {
-        "revision" : "5c22d9711031b574f9e0ae4470544c99ca29b2fd",
-        "version" : "1.0.0"
+        "revision" : "ec5e9fa33149b81b9ddbee37cc86e94c13d1f52d",
+        "version" : "1.0.2"
       }
     },
     {
