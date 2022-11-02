@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SDWebImage/SDWebImage.git",
       "state" : {
-        "revision" : "9248fe561a2a153916fb9597e3af4434784c6d32",
-        "version" : "5.13.4"
+        "revision" : "318cca556b0489aede0cd98d8d0c7f1408ab7bd6",
+        "version" : "5.13.5"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/helsingborg-stad/spm-daisy",
       "state" : {
-        "revision" : "fafd15043203368165fb53431c3c1ff455946a30",
-        "version" : "1.0.5"
+        "revision" : "e2305046330791cf79da75dd7fdfbc8e4fd4ba71",
+        "version" : "1.0.6"
       }
     },
     {
@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/helsingborg-stad/spm-laiban",
       "state" : {
-        "revision" : "ec5e9fa33149b81b9ddbee37cc86e94c13d1f52d",
-        "version" : "1.0.2"
+        "revision" : "41fe0ccf57f3bfd2b2bfaeb441b9b25e6b749729",
+        "version" : "1.0.3"
       }
     },
     {
