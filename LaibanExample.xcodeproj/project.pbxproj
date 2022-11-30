@@ -29,6 +29,7 @@
 		0E77B55928D85D3000C3044C /* MyCustomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55828D85D3000C3044C /* MyCustomService.swift */; };
 		0E77B55B28D85D3C00C3044C /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55A28D85D3C00C3044C /* MyCustomView.swift */; };
 		0E77B55D28D85D4D00C3044C /* MyCustomViewIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */; };
+		DECB6113292234BC00E92078 /* AppAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB6112292234BC00E92078 /* AppAnalytics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		0E77B55828D85D3000C3044C /* MyCustomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomService.swift; sourceTree = "<group>"; };
 		0E77B55A28D85D3C00C3044C /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
 		0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomViewIcon.swift; sourceTree = "<group>"; };
+		DECB6112292234BC00E92078 /* AppAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnalytics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				0E77B55528D855E700C3044C /* Info.plist */,
 				0E77B52428D4B49500C3044C /* LaibanExampleApp.swift */,
+				DECB6112292234BC00E92078 /* AppAnalytics.swift */,
 				0E77B54A28D4B55D00C3044C /* AppState.swift */,
 				0E77B54D28D4F0AD00C3044C /* AppConfig.swift */,
 				0E77B52628D4B49500C3044C /* RootView.swift */,
@@ -252,6 +255,7 @@
 				0E77B54E28D4F0AD00C3044C /* AppConfig.swift in Sources */,
 				0E77B55928D85D3000C3044C /* MyCustomService.swift in Sources */,
 				0E77B52728D4B49500C3044C /* RootView.swift in Sources */,
+				DECB6113292234BC00E92078 /* AppAnalytics.swift in Sources */,
 				0E77B52528D4B49500C3044C /* LaibanExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

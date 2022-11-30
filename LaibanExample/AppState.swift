@@ -18,6 +18,7 @@ import AsyncPublisher
 import Laiban
 
 // Daisy
+import Analytics
 import Dragoman
 import Assistant
 import Instagram
@@ -47,6 +48,8 @@ class AppState : ObservableObject {
     var foodWasteService = FoodWasteService()
     var languageService = LanguageService()
     var returnToHomeScreenService = ReturnToHomeScreenService()
+    var movementService = MovementService()
+    var appAnalytics = AppAnalytics()
     
     // App specific services
     var myCustomService = MyCustomService()
@@ -65,7 +68,8 @@ class AppState : ObservableObject {
             calendarService,
             foodWasteService,
             languageService,
-            returnToHomeScreenService
+            returnToHomeScreenService,
+            movementService
         ]
     }
     private var cancellables = Set<AnyCancellable>()
@@ -106,6 +110,8 @@ class AppState : ObservableObject {
         }
         assistant.dragoman.logger = defaultLogger
         assistant.tts.add(service: msTTS,prioritized: true)
+        
+        appAnalytics.initWith(settings: settings)
 
         translator.logger = defaultLogger
         translator.config = settings.config?.msTextTranslatorConfig
