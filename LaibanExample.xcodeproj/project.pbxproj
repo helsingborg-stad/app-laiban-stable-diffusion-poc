@@ -190,12 +190,12 @@
 			};
 			buildConfigurationList = 0E77B51C28D4B49500C3044C /* Build configuration list for PBXProject "LaibanExample" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = sv;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 				sv,
+				Base,
 			);
 			mainGroup = 0E77B51828D4B49500C3044C;
 			packageReferences = (
