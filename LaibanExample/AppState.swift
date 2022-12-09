@@ -120,6 +120,7 @@ class AppState : ObservableObject {
         assistant.dragoman.add(bundle: LBBundle)
         
         msTTS.config = settings.config?.msSpeechConfig
+        msTTS.pronunciations = pronunciationAdjustments
         
         $currentLanguage.sink { value in
             self.assistant.locale = value

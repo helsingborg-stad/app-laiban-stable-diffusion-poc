@@ -30,6 +30,7 @@
 		0E77B55B28D85D3C00C3044C /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55A28D85D3C00C3044C /* MyCustomView.swift */; };
 		0E77B55D28D85D4D00C3044C /* MyCustomViewIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */; };
 		DECB6113292234BC00E92078 /* AppAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB6112292234BC00E92078 /* AppAnalytics.swift */; };
+		F657A01A2940832D0015B3DF /* PronunciationAdjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		0E77B55A28D85D3C00C3044C /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
 		0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomViewIcon.swift; sourceTree = "<group>"; };
 		DECB6112292234BC00E92078 /* AppAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnalytics.swift; sourceTree = "<group>"; };
+		F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronunciationAdjustments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		0E77B52328D4B49500C3044C /* LaibanExample */ = {
 			isa = PBXGroup;
 			children = (
+				F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */,
 				0E77B55528D855E700C3044C /* Info.plist */,
 				0E77B52428D4B49500C3044C /* LaibanExampleApp.swift */,
 				DECB6112292234BC00E92078 /* AppAnalytics.swift */,
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F657A01A2940832D0015B3DF /* PronunciationAdjustments.swift in Sources */,
 				0E77B54B28D4B55D00C3044C /* AppState.swift in Sources */,
 				0E77B55D28D85D4D00C3044C /* MyCustomViewIcon.swift in Sources */,
 				0E77B55B28D85D3C00C3044C /* MyCustomView.swift in Sources */,

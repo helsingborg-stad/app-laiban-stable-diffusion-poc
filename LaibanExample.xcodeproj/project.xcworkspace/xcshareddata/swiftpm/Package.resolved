@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/helsingborg-stad/spm-laiban",
       "state" : {
-        "revision" : "251e44cb0c2bc4f6a27698bdae06b12347e16aaa",
-        "version" : "1.0.4"
+        "revision" : "b3aa4b96bf45dfd698c9d0f471c22a1ce7d44c64",
+        "version" : "1.0.5"
       }
     },
     {
@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/helsingborg-stad/spm-ms-cognitive-services",
       "state" : {
-        "revision" : "a4b2d17b9539d54166080ea4362d9da5570542c8",
-        "version" : "1.0.0"
+        "revision" : "ed3013aaa430e72528060224d7aa23bf65a24ca8",
+        "version" : "1.0.1"
       }
     },
     {
