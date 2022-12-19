@@ -45,8 +45,8 @@ struct RootView : View {
                 case LBViewIdentity.trashmonster:    TrashMonstersHomeViewIcon()
                 case LBViewIdentity.noticeboard:     NoticeboardHomeViewIcon()
                 case LBViewIdentity.undpinfo:        UNDPHomeViewIcon()
-                case LBViewIdentity.movement:        MovementHomeViewIcon()
-                //case LBViewIdentity.myCustomService: MyCustomViewIcon()
+//                case LBViewIdentity.movement:        MovementHomeViewIcon()       // Disabled and waiting for feedback from test users.
+//                case LBViewIdentity.myCustomService: MyCustomViewIcon()
                 default: EmptyView()
                 }
             }
@@ -74,8 +74,8 @@ struct RootView : View {
                 case LBViewIdentity.trashmonster:    TrashMontersView()
                 case LBViewIdentity.undpinfo:        UNDPInfoView()
                 case LBViewIdentity.home:            HomeView(publicCalendar: appState.publicCalendar, activityService: appState.activityService)
-                case LBViewIdentity.movement:        MovementView(service: appState.movementService)
-                //case LBViewIdentity.myCustomService: MyCustomView(service: appState.myCustomService)
+//                case LBViewIdentity.movement:        MovementView(service: appState.movementService)      // Disabled and waiting for feedback from test users.
+//                case LBViewIdentity.myCustomService: MyCustomView(service: appState.myCustomService)
                 default: EmptyView()
                 }
             }
