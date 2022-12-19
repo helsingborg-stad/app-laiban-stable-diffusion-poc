@@ -69,7 +69,8 @@ class AppState : ObservableObject {
             foodWasteService,
             languageService,
             returnToHomeScreenService,
-            movementService
+            movementService,
+            recreationService
         ]
     }
     private var cancellables = Set<AnyCancellable>()

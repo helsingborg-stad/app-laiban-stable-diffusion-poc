@@ -68,7 +68,7 @@ struct RootView : View {
                 case LBViewIdentity.instagram:       InstagramView(service: appState.instagramService)
                 case LBViewIdentity.memory:          MemoryView(service: appState.memoryGameService)
                 case LBViewIdentity.noticeboard:     NoticeboardView(service: appState.noticeboardService, contentProvider: appState)
-                case LBViewIdentity.recreation:      RecreationView()
+                case LBViewIdentity.recreation:      RecreationView(service: appState.recreationService)
                 case LBViewIdentity.singalong:       SingalongView()
                 case LBViewIdentity.time:            TimeView(service:appState.timeService, contentProvider: nil)
                 case LBViewIdentity.trashmonster:    TrashMontersView()
