@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/helsingborg-stad/spm-daisy",
       "state" : {
-        "revision" : "e2305046330791cf79da75dd7fdfbc8e4fd4ba71",
-        "version" : "1.0.6"
+        "revision" : "3addc851cfcfcebc587d47ec30ed36c9494317ae",
+        "version" : "1.0.7"
       }
     },
     {
@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/helsingborg-stad/spm-laiban",
       "state" : {
-        "revision" : "b3aa4b96bf45dfd698c9d0f471c22a1ce7d44c64",
-        "version" : "1.0.5"
+        "revision" : "ecdf1f5c22c2729ba0b1ce5abc0d18c5b06f71bf",
+        "version" : "1.0.6"
       }
     },
     {
@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/helsingborg-stad/spm-ms-cognitive-services",
       "state" : {
-        "revision" : "ed3013aaa430e72528060224d7aa23bf65a24ca8",
-        "version" : "1.0.1"
+        "revision" : "6b8c8e4c68a6ca2e8d27f0388447a63bc61d775a",
+        "version" : "1.0.2"
       }
     },
     {
