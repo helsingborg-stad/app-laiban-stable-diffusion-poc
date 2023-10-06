@@ -14,6 +14,7 @@ typealias LaibanSettings = AppSettings<AppConfig>
 let isPreview:Bool = ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] != nil
 let defaultLogger = Shout("Default")
 
+@available(iOS 16.2, *)
 @main struct LaibanExampleApp: App {
     @StateObject var appState = AppState()
     var body: some Scene {

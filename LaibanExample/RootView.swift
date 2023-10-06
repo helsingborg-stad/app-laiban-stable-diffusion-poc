@@ -12,14 +12,15 @@ import Combine
 import Assistant
 import Laiban
 
+@available(iOS 16.2, *)
 struct RootView : View {
     @EnvironmentObject var appState:AppState
     var dashboardLayout:[[LBDashboardItem]] {
         let a = appState
         return [
-            [a.timeService,         a.calendarService,  a.singalongService,     a.foodService,      a.foodWasteService          ],
-            [a.outdoorsService,     a.movementService,  a.recreationService,    a.activityService,  a.instagramService          ],
-            [a.memoryGameService,   a.undpService,      a.trashMonsterService,  a.noticeboardService /*, a.myCustomService*/    ]
+            [a.timeService,         a.calendarService,  a.singalongService,     a.foodService,          a.foodWasteService          ],
+            [a.outdoorsService,     a.movementService,  a.recreationService,    a.activityService,      a.instagramService          ],
+            [a.memoryGameService,   a.undpService,      a.trashMonsterService,  a.noticeboardService,   a.myCustomService           ]
         ]
     }
     var config: LBRootViewConfig {
@@ -46,7 +47,7 @@ struct RootView : View {
                 case LBViewIdentity.noticeboard:     NoticeboardHomeViewIcon()
                 case LBViewIdentity.undpinfo:        UNDPHomeViewIcon()
 //                case LBViewIdentity.movement:        MovementHomeViewIcon()       // Disabled and waiting for feedback from test users.
-//                case LBViewIdentity.myCustomService: MyCustomViewIcon()
+                case LBViewIdentity.myCustomService: MyCustomViewIcon()
                 default: EmptyView()
                 }
             }
@@ -75,7 +76,7 @@ struct RootView : View {
                 case LBViewIdentity.undpinfo:        UNDPInfoView()
                 case LBViewIdentity.home:            HomeView(publicCalendar: appState.publicCalendar, activityService: appState.activityService)
 //                case LBViewIdentity.movement:        MovementView(service: appState.movementService)      // Disabled and waiting for feedback from test users.
-//                case LBViewIdentity.myCustomService: MyCustomView(service: appState.myCustomService)
+                case LBViewIdentity.myCustomService: MyCustomView(service: appState.myCustomService)
                 default: EmptyView()
                 }
             }
