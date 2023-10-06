@@ -9,18 +9,23 @@ import SwiftUI
 import Laiban
 import Assistant
 
+@available(iOS 16.2, *)
 struct MyCustomView : View {
     @ObservedObject var service: MyCustomService
+
     @EnvironmentObject var viewState:LBViewState
     @EnvironmentObject var assistant:Assistant
+
     @Environment(\.fullscreenContainerProperties) var properties
     @Environment(\.locale) var locale
+    
+    @StateObject var imageGenerator = ImageGenerator()
+
     var body: some View {
-        Text("Detta är min Laiban-modul")
-            .frame(maxWidth:.infinity,alignment: .leading)
-            .padding(properties.spacing[.m])
-            .font(properties.font, ofSize: .n)
-            .primaryContainerBackground()
-            .frame(maxHeight:.infinity,alignment: .bottom)
+        TextToImageView(imageGenerator: imageGenerator)
+            .tabItem {
+                Image(systemName: "text.below.photo.fill")
+                Text("Text to Image")
+            }
     }
 }
