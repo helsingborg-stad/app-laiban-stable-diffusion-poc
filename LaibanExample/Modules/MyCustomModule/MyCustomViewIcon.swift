@@ -10,6 +10,6 @@ import Laiban
 
 struct MyCustomViewIcon : View {
     var body:some View {
-        LBEmojiBadgeView(emoji: "🤖", rimColor: .gray)
+        LBEmojiBadgeView(emoji: "🤖", rimColor: .pink)
     }
 }

@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-
-import SwiftUI
 import Combine
 import Assistant
 import Laiban
@@ -76,7 +74,7 @@ struct RootView : View {
                 case LBViewIdentity.undpinfo:        UNDPInfoView()
                 case LBViewIdentity.home:            HomeView(publicCalendar: appState.publicCalendar, activityService: appState.activityService)
 //                case LBViewIdentity.movement:        MovementView(service: appState.movementService)      // Disabled and waiting for feedback from test users.
-                case LBViewIdentity.myCustomService: MyCustomView(service: appState.myCustomService)
+                case LBViewIdentity.myCustomService: MyCustomView()
                 default: EmptyView()
                 }
             }
