@@ -48,8 +48,10 @@ struct HomeBugView: View {
             .cornerRadius(18.0)
         Text("Vill du skapa en bild på en insekt utifrån form och färg? Tryck på insekten för att tala om för en artisifiell intelligens hur insekten ska se ut.")
             .font(properties.font, ofSize: .xl)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-            .padding(20)
+            .frame(
+                maxWidth: .infinity,
+                alignment: .leading)
+            .padding(properties.spacing[.s])
             .secondaryContainerBackground(borderColor: .purple)
         Spacer()
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
