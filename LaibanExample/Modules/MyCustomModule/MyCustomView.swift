@@ -21,16 +21,20 @@ struct SelectionView: View {
             Button(action: { selectedItem = items[item] }) {
                 Image(item)
                     .resizable()
-                    .frame(width: 200, height: 200)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 250, height: 250, alignment: .center)
+                    .padding(10)
+                    .shadow(color: selectedItem == items[item] ? Color.gray : Color.clear, radius: 2.0)
+                    
             }
         }
         .frame(maxWidth: .infinity)
 
-        let displayText: String = selectedItem != nil ? "Inget valt" : "Prompt: \(selectedStep.rawValue)"
+        let displayText: String = selectedItem != nil ? "Prompt: \(selectedItem!)" : selectedStep.rawValue
 
         Text(displayText)
             .font(properties.font, ofSize: .xxl)
-            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
@@ -61,7 +65,7 @@ struct RenderBugView: View {
     @Binding var selectedBug: String?
     
     var body: some View {
-        let prompt: String = "\(selectedColor ?? "") + \(selectedShape ?? "") + \(selectedBug ?? "")"
+        let prompt: String = "\(selectedColor!) \(selectedShape!) \(selectedBug!)"
 
         Text("THIS IS THE RENDER VIEW")
             .font(properties.font, ofSize: .xxl)
