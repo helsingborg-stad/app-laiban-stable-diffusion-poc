@@ -1,40 +1,36 @@
 import SwiftUI
 import Laiban
 
-enum Step {
-    case Home
-    case Color
-    case Shape
-    case Render
+enum Step: String {
+    case Home = "Home"
+    case Color = "Välj färg"
+    case Shape = "Välj form"
+    case Bug = "Välj insekt"
+    case Render = "Rendera"
 }
 
 struct SelectionView: View {
     @Environment(\.fullscreenContainerProperties) var properties
-    let items: [String]
+    let items: [String: String]
     @Binding var selectedStep: Step
     @Binding var selectedItem: String?
 
     var body: some View {
         LBGridView(items: items.count, columns: 3) { i in
-            let item = items[i]
-            Button(item, action: { selectedItem = item })
-                .padding(10)
-                .background(.primary)
-                .colorInvert()
-                
+            let item = Array(items.keys)[i]
+            Button(action: { selectedItem = items[item] }) {
+                Image(item)
+                    .resizable()
+                    .frame(width: 200, height: 200)
+            }
         }
-        .font(properties.font, ofSize: .xxl)
         .frame(maxWidth: .infinity)
-        
-        if selectedItem != nil {
-            Text("Du har valt \(selectedStep == .Color ? "färgen" : "formen"): \(selectedItem!)")
-                .font(properties.font, ofSize: .xxl)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-        } else {
-            Text("Vilken \(selectedStep == .Color ? "färg" : "form") ska insekten ha?")
-                .font(properties.font, ofSize: .xxl)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-        }
+
+        let displayText: String = selectedItem != nil ? "Inget valt" : "Prompt: \(selectedStep.rawValue)"
+
+        Text(displayText)
+            .font(properties.font, ofSize: .xxl)
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
     }
 }
 
@@ -62,28 +58,46 @@ struct RenderBugView: View {
     @Environment(\.fullscreenContainerProperties) var properties
     @Binding var selectedColor: String?
     @Binding var selectedShape: String?
+    @Binding var selectedBug: String?
     
     var body: some View {
-        Text("RENDER BUG VIEW")
-            .font(properties.font, ofSize: .xxl)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        let prompt: String = "\(selectedColor ?? "") + \(selectedShape ?? "") + \(selectedBug ?? "")"
 
-        Text(selectedColor!)
+        Text("THIS IS THE RENDER VIEW")
             .font(properties.font, ofSize: .xxl)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
-        Text(selectedShape!)
-            .font(properties.font, ofSize: .xxl)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        Text(prompt)
+            .font(properties.font, ofSize: .xl)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
 }
 
 struct MyCustomView: View {
     @Environment(\.fullscreenContainerProperties) var properties
+    
+    let colorImageTextMapping: [String: String] = [
+        "splash.red": "color red",
+        "splash.blue": "color blue",
+        "splash.yellow": "color yellow",
+    ]
 
+    let shapeImageTextMapping: [String: String] = [
+        "shape.square": "square shape",
+        "shape.tri": "triangle shape",
+        "shape.circle": "circle shape",
+    ]
+
+    let bugImageTextMapping: [String: String] = [
+        "bug.beatle": "bug beatle",
+        "bug.butterfly": "bug butterfly",
+        "bug.wasp": "bug wasp",
+    ]
+    
     @State var selectedStep: Step = .Home
-    @State var selectedColor: String?
-    @State var selectedShape: String?
+    @State var selectedColorImageName: String?
+    @State var selectedShapeImageName: String?
+    @State var selectedBugImageName: String?
 
     var body: some View {
         VStack {
@@ -92,20 +106,27 @@ struct MyCustomView: View {
             }
 
             if selectedStep == .Color {
-                SelectionView(items: ["red", "yellow", "blue", "black"],
+                SelectionView(items: colorImageTextMapping,
                               selectedStep: $selectedStep,
-                              selectedItem: $selectedColor)
+                              selectedItem: $selectedColorImageName)
             }
 
             if selectedStep == .Shape {
-                SelectionView(items: ["square", "triangle", "cylinder"],
+                SelectionView(items: shapeImageTextMapping,
                               selectedStep: $selectedStep,
-                              selectedItem: $selectedShape)
+                              selectedItem: $selectedShapeImageName)
+            }
+
+            if selectedStep == .Bug {
+                SelectionView(items: bugImageTextMapping,
+                              selectedStep: $selectedStep,
+                              selectedItem: $selectedBugImageName)
             }
 
             if selectedStep == .Render {
-                RenderBugView(selectedColor: $selectedColor,
-                              selectedShape: $selectedShape)
+                RenderBugView(selectedColor: $selectedColorImageName,
+                              selectedShape: $selectedShapeImageName,
+                              selectedBug: $selectedBugImageName)
             }
 
             if selectedStep != .Render {
@@ -116,17 +137,20 @@ struct MyCustomView: View {
                         case .Color:
                             selectedStep = .Shape
                         case .Shape:
+                            selectedStep = .Bug
+                        case .Bug:
                             selectedStep = .Render
-                        case .Render:
+                        default:
                             break
                     }
                 }
             }
 
             Button("RESET") {
-                selectedStep = .Color
-                selectedColor = nil
-                selectedShape = nil
+                selectedStep = .Home
+                selectedColorImageName = nil
+                selectedShapeImageName = nil
+                selectedBugImageName = nil
             }
             .padding()
         }
