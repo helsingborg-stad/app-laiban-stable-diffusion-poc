@@ -1,12 +1,13 @@
+import Analytics
 import SwiftUI
 import Laiban
 
 enum Step: String {
-    case Home = "Home"
     case Color = "Välj färg"
     case Shape = "Välj form"
     case Bug = "Välj insekt"
-    case Render = "Rendera"
+    case Home
+    case Render
 }
 
 struct SelectionView: View {
@@ -16,17 +17,19 @@ struct SelectionView: View {
     @Binding var selectedItem: String?
 
     var body: some View {
-        LBGridView(items: items.count, columns: 3) { i in
+        LBGridView(items: items.count, columns: 3, verticalSpacing: 7, horizontalSpacing: 7, verticalAlignment: .top, horizontalAlignment: .center) { i in
             let item = Array(items.keys)[i]
-            Button(action: { selectedItem = items[item] }) {
+            Button(action: {
+                selectedItem = items[item]
+            }, label: {
                 Image(item)
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 250, height: 250, alignment: .center)
+                    .aspectRatio(1, contentMode: .fit)
+                    .frame(width: (properties.contentSize.width / 3) * 0.8)
                     .padding(10)
-                    .shadow(color: selectedItem == items[item] ? Color.gray : Color.clear, radius: 2.0)
+                    .shadow(color: selectedItem == items[item] ? Color.gray : Color.clear, radius: 5)
                     
-            }
+            })
         }
         .frame(maxWidth: .infinity)
 
@@ -35,17 +38,34 @@ struct SelectionView: View {
         Text(displayText)
             .font(properties.font, ofSize: .xxl)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+        if selectedItem != nil {
+            Button("Gå vidare") {
+                switch selectedStep {
+                    case .Color:
+                        selectedStep = .Shape
+                    case .Shape:
+                        selectedStep = .Bug
+                    case .Bug:
+                        selectedStep = .Render
+                    default:
+                        break
+                }
+            }
+        }
     }
 }
 
 struct HomeBugView: View {
     @Environment(\.fullscreenContainerProperties) var properties
+    @Binding var selectedStep: Step
 
     var body: some View {
         Image("intro")
             .resizable()
-            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+            .aspectRatio(contentMode: .fill)
             .cornerRadius(18.0)
+
         Text("Vill du skapa en bild på en insekt utifrån form och färg? Tryck på insekten för att tala om för en artisifiell intelligens hur insekten ska se ut.")
             .font(properties.font, ofSize: .xl)
             .frame(
@@ -53,13 +73,19 @@ struct HomeBugView: View {
                 alignment: .leading)
             .padding(properties.spacing[.s])
             .secondaryContainerBackground(borderColor: .purple)
+
         Spacer()
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+
+        Button("Starta") {
+            selectedStep = .Color
+        }
     }
 }
 
 struct RenderBugView: View {
     @Environment(\.fullscreenContainerProperties) var properties
+    @Binding var selectedStep: Step
     @Binding var selectedColor: String?
     @Binding var selectedShape: String?
     @Binding var selectedBug: String?
@@ -74,6 +100,10 @@ struct RenderBugView: View {
         Text(prompt)
             .font(properties.font, ofSize: .xl)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+
+        Button("Börja om från början") {
+            selectedStep = .Home
+        }
     }
 }
 
@@ -102,11 +132,11 @@ struct MyCustomView: View {
     @State var selectedColorImageName: String?
     @State var selectedShapeImageName: String?
     @State var selectedBugImageName: String?
-
+    
     var body: some View {
         VStack {
             if selectedStep == .Home {
-                HomeBugView()
+                HomeBugView(selectedStep: $selectedStep)
             }
 
             if selectedStep == .Color {
@@ -128,39 +158,18 @@ struct MyCustomView: View {
             }
 
             if selectedStep == .Render {
-                RenderBugView(selectedColor: $selectedColorImageName,
+                RenderBugView(selectedStep: $selectedStep,
+                              selectedColor: $selectedColorImageName,
                               selectedShape: $selectedShapeImageName,
                               selectedBug: $selectedBugImageName)
             }
-
-            if selectedStep != .Render {
-                Button("Gå vidare") {
-                    switch selectedStep {
-                        case .Home:
-                            selectedStep = .Color
-                        case .Color:
-                            selectedStep = .Shape
-                        case .Shape:
-                            selectedStep = .Bug
-                        case .Bug:
-                            selectedStep = .Render
-                        default:
-                            break
-                    }
-                }
-            }
-
-            Button("RESET") {
-                selectedStep = .Home
-                selectedColorImageName = nil
-                selectedShapeImageName = nil
-                selectedBugImageName = nil
-            }
-            .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(properties.spacing[.m])
         .primaryContainerBackground()
+        .onAppear {
+            AnalyticsService.shared.logPageView(self)
+        }
     }
 }
 
