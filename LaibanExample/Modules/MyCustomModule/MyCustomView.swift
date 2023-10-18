@@ -1,4 +1,3 @@
-import Analytics
 import SwiftUI
 import Laiban
 
@@ -167,9 +166,6 @@ struct MyCustomView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(properties.spacing[.m])
         .primaryContainerBackground()
-        .onAppear {
-            AnalyticsService.shared.logPageView(self)
-        }
     }
 }
 
