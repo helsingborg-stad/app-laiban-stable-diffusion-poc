@@ -152,8 +152,11 @@ struct MyCustomView: View {
         VStack {
             if selectedStep == .Home {
                 HomeBugView(selectedStep: $selectedStep)
+                    .onAppear {
+                        generateStatus = .ShouldGenerate
+                    }
             }
-
+            
             if selectedStep == .Color {
                 SelectionView(items: colorImageTextMapping,
                               selectedStep: $selectedStep,
@@ -207,7 +210,7 @@ struct MyCustomView: View {
     }
     
     func generateImage() {
-        Task {
+        Task.detached(priority: .high) {
             do {
                 generateStatus = .IsGenerating
                 

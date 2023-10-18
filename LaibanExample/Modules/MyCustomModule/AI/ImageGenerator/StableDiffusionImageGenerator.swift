@@ -128,7 +128,7 @@ public extension StableDiffusionPipeline {
                 encoder: encoder,
                 controlNet: controlNet,
                 safetyChecker: safetyChecker,
-                reduceMemory: false,
+                reduceMemory: true,
                 useMultilingualTextEncoder: false,
                 script: nil
             )
