@@ -29,6 +29,13 @@
 		0E77B55928D85D3000C3044C /* MyCustomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55828D85D3000C3044C /* MyCustomService.swift */; };
 		0E77B55B28D85D3C00C3044C /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55A28D85D3C00C3044C /* MyCustomView.swift */; };
 		0E77B55D28D85D4D00C3044C /* MyCustomViewIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */; };
+		7E1632032ADFC87E00066460 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1632022ADFC87E00066460 /* ZIPFoundation */; };
+		7E16320F2ADFE0EB00066460 /* StableDiffusionImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1632082ADFE0EB00066460 /* StableDiffusionImageGenerator.swift */; };
+		7E1632102ADFE0EB00066460 /* AIImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1632092ADFE0EB00066460 /* AIImageGenerator.swift */; };
+		7E1632112ADFE0EB00066460 /* MockImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16320A2ADFE0EB00066460 /* MockImageGenerator.swift */; };
+		7E1632122ADFE0EB00066460 /* LocalBundleModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16320C2ADFE0EB00066460 /* LocalBundleModelProvider.swift */; };
+		7E1632132ADFE0EB00066460 /* AIModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16320D2ADFE0EB00066460 /* AIModelProvider.swift */; };
+		7E1632142ADFE0EB00066460 /* UrlModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16320E2ADFE0EB00066460 /* UrlModelProvider.swift */; };
 		9C76087B2AD0404000F1F1E4 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 9C76087A2AD0404000F1F1E4 /* StableDiffusion */; };
 		DECB6113292234BC00E92078 /* AppAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB6112292234BC00E92078 /* AppAnalytics.swift */; };
 		F657A01A2940832D0015B3DF /* PronunciationAdjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */; };
@@ -46,6 +53,12 @@
 		0E77B55828D85D3000C3044C /* MyCustomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomService.swift; sourceTree = "<group>"; };
 		0E77B55A28D85D3C00C3044C /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
 		0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomViewIcon.swift; sourceTree = "<group>"; };
+		7E1632082ADFE0EB00066460 /* StableDiffusionImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionImageGenerator.swift; sourceTree = "<group>"; };
+		7E1632092ADFE0EB00066460 /* AIImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIImageGenerator.swift; sourceTree = "<group>"; };
+		7E16320A2ADFE0EB00066460 /* MockImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageGenerator.swift; sourceTree = "<group>"; };
+		7E16320C2ADFE0EB00066460 /* LocalBundleModelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalBundleModelProvider.swift; sourceTree = "<group>"; };
+		7E16320D2ADFE0EB00066460 /* AIModelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIModelProvider.swift; sourceTree = "<group>"; };
+		7E16320E2ADFE0EB00066460 /* UrlModelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlModelProvider.swift; sourceTree = "<group>"; };
 		DECB6112292234BC00E92078 /* AppAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnalytics.swift; sourceTree = "<group>"; };
 		F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronunciationAdjustments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +82,7 @@
 				0E77B54328D4B53E00C3044C /* STT in Frameworks */,
 				0E77B53928D4B53E00C3044C /* Assistant in Frameworks */,
 				0E77B54728D4B53E00C3044C /* TextTranslator in Frameworks */,
+				7E1632032ADFC87E00066460 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,11 +149,41 @@
 		0E77B55728D85D1D00C3044C /* MyCustomModule */ = {
 			isa = PBXGroup;
 			children = (
+				7E1632062ADFE0EB00066460 /* AI */,
 				0E77B55828D85D3000C3044C /* MyCustomService.swift */,
 				0E77B55A28D85D3C00C3044C /* MyCustomView.swift */,
 				0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */,
 			);
 			path = MyCustomModule;
+			sourceTree = "<group>";
+		};
+		7E1632062ADFE0EB00066460 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				7E1632072ADFE0EB00066460 /* ImageGenerator */,
+				7E16320B2ADFE0EB00066460 /* ModelProvider */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		7E1632072ADFE0EB00066460 /* ImageGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				7E1632082ADFE0EB00066460 /* StableDiffusionImageGenerator.swift */,
+				7E1632092ADFE0EB00066460 /* AIImageGenerator.swift */,
+				7E16320A2ADFE0EB00066460 /* MockImageGenerator.swift */,
+			);
+			path = ImageGenerator;
+			sourceTree = "<group>";
+		};
+		7E16320B2ADFE0EB00066460 /* ModelProvider */ = {
+			isa = PBXGroup;
+			children = (
+				7E16320C2ADFE0EB00066460 /* LocalBundleModelProvider.swift */,
+				7E16320D2ADFE0EB00066460 /* AIModelProvider.swift */,
+				7E16320E2ADFE0EB00066460 /* UrlModelProvider.swift */,
+			);
+			path = ModelProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +218,7 @@
 				0E77B55028D4F16700C3044C /* Shout */,
 				0E77B55228D4F1D700C3044C /* MSCognitiveServices */,
 				9C76087A2AD0404000F1F1E4 /* StableDiffusion */,
+				7E1632022ADFC87E00066460 /* ZIPFoundation */,
 			);
 			productName = LaibanExample;
 			productReference = 0E77B52128D4B49500C3044C /* LaibanExample.app */;
@@ -209,6 +254,7 @@
 				0E77B53528D4B53E00C3044C /* XCRemoteSwiftPackageReference "spm-daisy" */,
 				0E77B54C28D4EF8900C3044C /* XCRemoteSwiftPackageReference "spm-ms-cognitive-services" */,
 				9C7608792AD0404000F1F1E4 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+				7E1632012ADFC87E00066460 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 			);
 			productRefGroup = 0E77B52228D4B49500C3044C /* Products */;
 			projectDirPath = "";
@@ -259,14 +305,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F657A01A2940832D0015B3DF /* PronunciationAdjustments.swift in Sources */,
+				7E1632142ADFE0EB00066460 /* UrlModelProvider.swift in Sources */,
+				7E1632102ADFE0EB00066460 /* AIImageGenerator.swift in Sources */,
+				7E1632132ADFE0EB00066460 /* AIModelProvider.swift in Sources */,
+				7E1632122ADFE0EB00066460 /* LocalBundleModelProvider.swift in Sources */,
 				0E77B54B28D4B55D00C3044C /* AppState.swift in Sources */,
 				0E77B55D28D85D4D00C3044C /* MyCustomViewIcon.swift in Sources */,
 				0E77B55B28D85D3C00C3044C /* MyCustomView.swift in Sources */,
+				7E16320F2ADFE0EB00066460 /* StableDiffusionImageGenerator.swift in Sources */,
 				0E77B54E28D4F0AD00C3044C /* AppConfig.swift in Sources */,
 				0E77B55928D85D3000C3044C /* MyCustomService.swift in Sources */,
 				0E77B52728D4B49500C3044C /* RootView.swift in Sources */,
 				DECB6113292234BC00E92078 /* AppAnalytics.swift in Sources */,
 				0E77B52528D4B49500C3044C /* LaibanExampleApp.swift in Sources */,
+				7E1632112ADFE0EB00066460 /* MockImageGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +469,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +509,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -517,6 +569,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
+			};
+		};
+		7E1632012ADFC87E00066460 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.17;
 			};
 		};
 		9C7608792AD0404000F1F1E4 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
@@ -594,6 +654,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E77B54C28D4EF8900C3044C /* XCRemoteSwiftPackageReference "spm-ms-cognitive-services" */;
 			productName = MSCognitiveServices;
+		};
+		7E1632022ADFC87E00066460 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E1632012ADFC87E00066460 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
 		};
 		9C76087A2AD0404000F1F1E4 /* StableDiffusion */ = {
 			isa = XCSwiftPackageProductDependency;

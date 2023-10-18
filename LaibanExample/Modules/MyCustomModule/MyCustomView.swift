@@ -9,6 +9,12 @@ enum Step: String {
     case Render
 }
 
+enum GenerateStatus {
+    case ShouldGenerate
+    case IsGenerating
+    case DoneGenerating(error: Error?)
+}
+
 struct SelectionView: View {
     @Environment(\.fullscreenContainerProperties) var properties
     let items: [String: String]
@@ -85,20 +91,26 @@ struct HomeBugView: View {
 struct RenderBugView: View {
     @Environment(\.fullscreenContainerProperties) var properties
     @Binding var selectedStep: Step
-    @Binding var selectedColor: String?
-    @Binding var selectedShape: String?
-    @Binding var selectedBug: String?
+    
+    var image: UIImage?
+    var statusText: String
     
     var body: some View {
-        let prompt: String = "\(selectedColor!) \(selectedShape!) \(selectedBug!)"
-
-        Text("THIS IS THE RENDER VIEW")
-            .font(properties.font, ofSize: .xxl)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-
-        Text(prompt)
-            .font(properties.font, ofSize: .xl)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        VStack {
+            Text(statusText)
+                .font(properties.font, ofSize: .xl)
+            
+            ZStack {
+                if let image = image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: .infinity, maxHeight: 512)
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(50)
+        }
 
         Button("Börja om från början") {
             selectedStep = .Home
@@ -132,6 +144,10 @@ struct MyCustomView: View {
     @State var selectedShapeImageName: String?
     @State var selectedBugImageName: String?
     
+    @State var generateStatus: GenerateStatus = .ShouldGenerate
+    @State var generatedImage: UIImage?
+    @State var generateStatusText: String = ""
+    
     var body: some View {
         VStack {
             if selectedStep == .Home {
@@ -158,14 +174,76 @@ struct MyCustomView: View {
 
             if selectedStep == .Render {
                 RenderBugView(selectedStep: $selectedStep,
-                              selectedColor: $selectedColorImageName,
-                              selectedShape: $selectedShapeImageName,
-                              selectedBug: $selectedBugImageName)
+                              image: generatedImage,
+                              statusText: generateStatusText
+                )
+                .onAppear {
+                    print("Render view! \(generateStatus)")
+                    switch(generateStatus) {
+                    case .ShouldGenerate:
+                        generateImage()
+                    default:
+                        break
+                    }
+                }
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(properties.spacing[.m])
         .primaryContainerBackground()
+    }
+    
+    func getPrompts() -> (positive: String, negative: String) {
+        let userPrompt = [
+            selectedColorImageName!,
+            selectedShapeImageName!,
+            selectedBugImageName!
+        ].joined(separator: ", ")
+        
+        return (
+            positive: userPrompt + ", bug, insect, beetle, ant, bee, single, solo, masterpiece, highres, photorealistic, realistic, photography, soft lighting, Nikon RAW Photo, Fujifilm XT3, best quality",
+            negative: "low quality, worst quality, bad hands, human, people, person, man, woman, blurry, motion blur, close up, watermark, camouflage"
+        )
+    }
+    
+    func generateImage() {
+        Task {
+            do {
+                generateStatus = .IsGenerating
+                
+//                var imageGenerator = StableDiffusionImageGenerator(modelProvider: UrlModelProvider())
+                let imageGenerator = MockImageGenerator()
+                
+                print("Warming up 🔥...")
+                generateStatusText = "Värmer upp 🔥..."
+                try await imageGenerator.warmup() { progress in
+                    let percentage = progress.fractionCompleted * 100
+                    let formattedPercentage = String(format: "%.0f%%", percentage)
+                    generateStatusText = "\(formattedPercentage) \(progress.localizedDescription!)"
+                }
+                
+                let (positive, negative) = getPrompts()
+                
+                print("positive: \(positive)")
+                print("negative: \(negative)")
+                
+                print("Generating 📸...")
+                generatedImage = try await imageGenerator.generate(positivePrompt: positive, negativePrompt: negative) { fractionDone, partialImage in
+                    let percentage = fractionDone * 100
+                    let formattedPercentage = String(format: "%.0f%%", percentage)
+                    generateStatusText = "\(formattedPercentage) färdig 🚀"
+                    generatedImage = partialImage
+                }
+                
+                generateStatusText = "Klar! Så här blev din bild 🪲"
+                generateStatus = .DoneGenerating(error: nil)
+                print("image generation done")
+            } catch {
+                print("image generation failed: \(error)")
+                generateStatus = .DoneGenerating(error: error)
+                generateStatusText = "Hoppsan, något gick snett 😞"
+            }
+        }
     }
 }
 
