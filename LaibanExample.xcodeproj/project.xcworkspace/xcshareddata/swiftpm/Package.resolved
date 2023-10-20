@@ -55,15 +55,6 @@
       }
     },
     {
-      "identity" : "spm-laiban",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/helsingborg-stad/spm-laiban",
-      "state" : {
-        "revision" : "7ab32a7a6c696981549d268702f596e918a21e61",
-        "version" : "1.1.2"
-      }
-    },
-    {
       "identity" : "spm-ms-cognitive-services",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/helsingborg-stad/spm-ms-cognitive-services",

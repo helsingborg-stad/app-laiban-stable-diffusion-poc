@@ -50,6 +50,7 @@ class AppState : ObservableObject {
     var returnToHomeScreenService = ReturnToHomeScreenService()
     var movementService = MovementService()
     var appAnalytics = AppAnalytics()
+    var imageGeneratorService = ImageGeneratorService()
     
     // App specific services
     var myCustomService = MyCustomService()
@@ -70,7 +71,7 @@ class AppState : ObservableObject {
             languageService,
             returnToHomeScreenService,
             movementService,
-            recreationService
+            recreationService,
         ]
     }
     private var cancellables = Set<AnyCancellable>()
@@ -153,6 +154,7 @@ class AppState : ObservableObject {
             }
         }
     }
+    
     func completeInitialization(){
         // Setting upp assistant properties based on settings stored in language service
         assistant.ttsRate = languageService.data.ttsRate

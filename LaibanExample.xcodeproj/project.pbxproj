@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		0E77B52728D4B49500C3044C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B52628D4B49500C3044C /* RootView.swift */; };
 		0E77B52928D4B49800C3044C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E77B52828D4B49800C3044C /* Assets.xcassets */; };
 		0E77B52C28D4B49800C3044C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E77B52B28D4B49800C3044C /* Preview Assets.xcassets */; };
-		0E77B53428D4B4E500C3044C /* Laiban in Frameworks */ = {isa = PBXBuildFile; productRef = 0E77B53328D4B4E500C3044C /* Laiban */; };
 		0E77B53728D4B53E00C3044C /* AppSettings in Frameworks */ = {isa = PBXBuildFile; productRef = 0E77B53628D4B53E00C3044C /* AppSettings */; };
 		0E77B53928D4B53E00C3044C /* Assistant in Frameworks */ = {isa = PBXBuildFile; productRef = 0E77B53828D4B53E00C3044C /* Assistant */; };
 		0E77B53B28D4B53E00C3044C /* AudioSwitchboard in Frameworks */ = {isa = PBXBuildFile; productRef = 0E77B53A28D4B53E00C3044C /* AudioSwitchboard */; };
@@ -30,13 +29,11 @@
 		0E77B55B28D85D3C00C3044C /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55A28D85D3C00C3044C /* MyCustomView.swift */; };
 		0E77B55D28D85D4D00C3044C /* MyCustomViewIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */; };
 		7E1632032ADFC87E00066460 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1632022ADFC87E00066460 /* ZIPFoundation */; };
-		7E16320F2ADFE0EB00066460 /* StableDiffusionImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1632082ADFE0EB00066460 /* StableDiffusionImageGenerator.swift */; };
-		7E1632102ADFE0EB00066460 /* AIImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1632092ADFE0EB00066460 /* AIImageGenerator.swift */; };
-		7E1632112ADFE0EB00066460 /* MockImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16320A2ADFE0EB00066460 /* MockImageGenerator.swift */; };
-		7E1632122ADFE0EB00066460 /* LocalBundleModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16320C2ADFE0EB00066460 /* LocalBundleModelProvider.swift */; };
-		7E1632132ADFE0EB00066460 /* AIModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16320D2ADFE0EB00066460 /* AIModelProvider.swift */; };
-		7E1632142ADFE0EB00066460 /* UrlModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16320E2ADFE0EB00066460 /* UrlModelProvider.swift */; };
 		9C76087B2AD0404000F1F1E4 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 9C76087A2AD0404000F1F1E4 /* StableDiffusion */; };
+		9C9C5F972AE1523200D7DA6A /* Laiban in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F962AE1523200D7DA6A /* Laiban */; };
+		9C9C5F992AE1523200D7DA6A /* SharedActivities in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F982AE1523200D7DA6A /* SharedActivities */; };
+		9C9C5F9B2AE1523200D7DA6A /* TextAutoCorrector in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F9A2AE1523200D7DA6A /* TextAutoCorrector */; };
+		9C9C5F9D2AE1523200D7DA6A /* UDPipe in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F9C2AE1523200D7DA6A /* UDPipe */; };
 		DECB6113292234BC00E92078 /* AppAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB6112292234BC00E92078 /* AppAnalytics.swift */; };
 		F657A01A2940832D0015B3DF /* PronunciationAdjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */; };
 /* End PBXBuildFile section */
@@ -53,12 +50,6 @@
 		0E77B55828D85D3000C3044C /* MyCustomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomService.swift; sourceTree = "<group>"; };
 		0E77B55A28D85D3C00C3044C /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
 		0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomViewIcon.swift; sourceTree = "<group>"; };
-		7E1632082ADFE0EB00066460 /* StableDiffusionImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionImageGenerator.swift; sourceTree = "<group>"; };
-		7E1632092ADFE0EB00066460 /* AIImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIImageGenerator.swift; sourceTree = "<group>"; };
-		7E16320A2ADFE0EB00066460 /* MockImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageGenerator.swift; sourceTree = "<group>"; };
-		7E16320C2ADFE0EB00066460 /* LocalBundleModelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalBundleModelProvider.swift; sourceTree = "<group>"; };
-		7E16320D2ADFE0EB00066460 /* AIModelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIModelProvider.swift; sourceTree = "<group>"; };
-		7E16320E2ADFE0EB00066460 /* UrlModelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlModelProvider.swift; sourceTree = "<group>"; };
 		DECB6112292234BC00E92078 /* AppAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnalytics.swift; sourceTree = "<group>"; };
 		F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronunciationAdjustments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,19 +59,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9C5F972AE1523200D7DA6A /* Laiban in Frameworks */,
 				0E77B55128D4F16700C3044C /* Shout in Frameworks */,
 				9C76087B2AD0404000F1F1E4 /* StableDiffusion in Frameworks */,
 				0E77B54528D4B53E00C3044C /* TTS in Frameworks */,
 				0E77B53D28D4B53E00C3044C /* Dragoman in Frameworks */,
+				9C9C5F9B2AE1523200D7DA6A /* TextAutoCorrector in Frameworks */,
 				0E77B54128D4B53E00C3044C /* PublicCalendar in Frameworks */,
 				0E77B53B28D4B53E00C3044C /* AudioSwitchboard in Frameworks */,
-				0E77B53428D4B4E500C3044C /* Laiban in Frameworks */,
 				0E77B53F28D4B53E00C3044C /* Meals in Frameworks */,
 				0E77B54928D4B53E00C3044C /* Weather in Frameworks */,
 				0E77B55328D4F1D700C3044C /* MSCognitiveServices in Frameworks */,
 				0E77B53728D4B53E00C3044C /* AppSettings in Frameworks */,
 				0E77B54328D4B53E00C3044C /* STT in Frameworks */,
+				9C9C5F992AE1523200D7DA6A /* SharedActivities in Frameworks */,
 				0E77B53928D4B53E00C3044C /* Assistant in Frameworks */,
+				9C9C5F9D2AE1523200D7DA6A /* UDPipe in Frameworks */,
 				0E77B54728D4B53E00C3044C /* TextTranslator in Frameworks */,
 				7E1632032ADFC87E00066460 /* ZIPFoundation in Frameworks */,
 			);
@@ -149,41 +143,11 @@
 		0E77B55728D85D1D00C3044C /* MyCustomModule */ = {
 			isa = PBXGroup;
 			children = (
-				7E1632062ADFE0EB00066460 /* AI */,
 				0E77B55828D85D3000C3044C /* MyCustomService.swift */,
 				0E77B55A28D85D3C00C3044C /* MyCustomView.swift */,
 				0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */,
 			);
 			path = MyCustomModule;
-			sourceTree = "<group>";
-		};
-		7E1632062ADFE0EB00066460 /* AI */ = {
-			isa = PBXGroup;
-			children = (
-				7E1632072ADFE0EB00066460 /* ImageGenerator */,
-				7E16320B2ADFE0EB00066460 /* ModelProvider */,
-			);
-			path = AI;
-			sourceTree = "<group>";
-		};
-		7E1632072ADFE0EB00066460 /* ImageGenerator */ = {
-			isa = PBXGroup;
-			children = (
-				7E1632082ADFE0EB00066460 /* StableDiffusionImageGenerator.swift */,
-				7E1632092ADFE0EB00066460 /* AIImageGenerator.swift */,
-				7E16320A2ADFE0EB00066460 /* MockImageGenerator.swift */,
-			);
-			path = ImageGenerator;
-			sourceTree = "<group>";
-		};
-		7E16320B2ADFE0EB00066460 /* ModelProvider */ = {
-			isa = PBXGroup;
-			children = (
-				7E16320C2ADFE0EB00066460 /* LocalBundleModelProvider.swift */,
-				7E16320D2ADFE0EB00066460 /* AIModelProvider.swift */,
-				7E16320E2ADFE0EB00066460 /* UrlModelProvider.swift */,
-			);
-			path = ModelProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +168,6 @@
 			);
 			name = LaibanExample;
 			packageProductDependencies = (
-				0E77B53328D4B4E500C3044C /* Laiban */,
 				0E77B53628D4B53E00C3044C /* AppSettings */,
 				0E77B53828D4B53E00C3044C /* Assistant */,
 				0E77B53A28D4B53E00C3044C /* AudioSwitchboard */,
@@ -219,6 +182,10 @@
 				0E77B55228D4F1D700C3044C /* MSCognitiveServices */,
 				9C76087A2AD0404000F1F1E4 /* StableDiffusion */,
 				7E1632022ADFC87E00066460 /* ZIPFoundation */,
+				9C9C5F962AE1523200D7DA6A /* Laiban */,
+				9C9C5F982AE1523200D7DA6A /* SharedActivities */,
+				9C9C5F9A2AE1523200D7DA6A /* TextAutoCorrector */,
+				9C9C5F9C2AE1523200D7DA6A /* UDPipe */,
 			);
 			productName = LaibanExample;
 			productReference = 0E77B52128D4B49500C3044C /* LaibanExample.app */;
@@ -250,11 +217,11 @@
 			);
 			mainGroup = 0E77B51828D4B49500C3044C;
 			packageReferences = (
-				0E77B53228D4B4E500C3044C /* XCRemoteSwiftPackageReference "spm-laiban" */,
 				0E77B53528D4B53E00C3044C /* XCRemoteSwiftPackageReference "spm-daisy" */,
 				0E77B54C28D4EF8900C3044C /* XCRemoteSwiftPackageReference "spm-ms-cognitive-services" */,
 				9C7608792AD0404000F1F1E4 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
 				7E1632012ADFC87E00066460 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+				9C9C5F952AE1523200D7DA6A /* XCLocalSwiftPackageReference "../spm-laiban" */,
 			);
 			productRefGroup = 0E77B52228D4B49500C3044C /* Products */;
 			projectDirPath = "";
@@ -305,20 +272,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F657A01A2940832D0015B3DF /* PronunciationAdjustments.swift in Sources */,
-				7E1632142ADFE0EB00066460 /* UrlModelProvider.swift in Sources */,
-				7E1632102ADFE0EB00066460 /* AIImageGenerator.swift in Sources */,
-				7E1632132ADFE0EB00066460 /* AIModelProvider.swift in Sources */,
-				7E1632122ADFE0EB00066460 /* LocalBundleModelProvider.swift in Sources */,
 				0E77B54B28D4B55D00C3044C /* AppState.swift in Sources */,
 				0E77B55D28D85D4D00C3044C /* MyCustomViewIcon.swift in Sources */,
 				0E77B55B28D85D3C00C3044C /* MyCustomView.swift in Sources */,
-				7E16320F2ADFE0EB00066460 /* StableDiffusionImageGenerator.swift in Sources */,
 				0E77B54E28D4F0AD00C3044C /* AppConfig.swift in Sources */,
 				0E77B55928D85D3000C3044C /* MyCustomService.swift in Sources */,
 				0E77B52728D4B49500C3044C /* RootView.swift in Sources */,
 				DECB6113292234BC00E92078 /* AppAnalytics.swift in Sources */,
 				0E77B52528D4B49500C3044C /* LaibanExampleApp.swift in Sources */,
-				7E1632112ADFE0EB00066460 /* MockImageGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,15 +507,14 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		0E77B53228D4B4E500C3044C /* XCRemoteSwiftPackageReference "spm-laiban" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/helsingborg-stad/spm-laiban";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		9C9C5F952AE1523200D7DA6A /* XCLocalSwiftPackageReference "../spm-laiban" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../spm-laiban";
 		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
 		0E77B53528D4B53E00C3044C /* XCRemoteSwiftPackageReference "spm-daisy" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/helsingborg-stad/spm-daisy";
@@ -590,11 +550,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0E77B53328D4B4E500C3044C /* Laiban */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0E77B53228D4B4E500C3044C /* XCRemoteSwiftPackageReference "spm-laiban" */;
-			productName = Laiban;
-		};
 		0E77B53628D4B53E00C3044C /* AppSettings */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0E77B53528D4B53E00C3044C /* XCRemoteSwiftPackageReference "spm-daisy" */;
@@ -664,6 +619,22 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9C7608792AD0404000F1F1E4 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
 			productName = StableDiffusion;
+		};
+		9C9C5F962AE1523200D7DA6A /* Laiban */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Laiban;
+		};
+		9C9C5F982AE1523200D7DA6A /* SharedActivities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedActivities;
+		};
+		9C9C5F9A2AE1523200D7DA6A /* TextAutoCorrector */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TextAutoCorrector;
+		};
+		9C9C5F9C2AE1523200D7DA6A /* UDPipe */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UDPipe;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
