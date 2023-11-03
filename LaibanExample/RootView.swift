@@ -74,7 +74,7 @@ struct RootView : View {
                 case LBViewIdentity.trashmonster:    TrashMontersView()
                 case LBViewIdentity.undpinfo:        UNDPInfoView()
                 case LBViewIdentity.home:            HomeView(publicCalendar: appState.publicCalendar, activityService: appState.activityService)
-                case LBViewIdentity.imageGenerator:  ImageGeneratorView()
+                case LBViewIdentity.imageGenerator:  ImageGeneratorView(service: appState.imageGeneratorService)
 //                case LBViewIdentity.movement:        MovementView(service: appState.movementService)      // Disabled and waiting for feedback from test users.
 //                case LBViewIdentity.myCustomService: MyCustomView()
                 default: EmptyView()
