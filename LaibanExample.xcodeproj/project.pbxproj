@@ -50,6 +50,7 @@
 		0E77B55828D85D3000C3044C /* MyCustomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomService.swift; sourceTree = "<group>"; };
 		0E77B55A28D85D3C00C3044C /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
 		0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomViewIcon.swift; sourceTree = "<group>"; };
+		7EBBA7732AFE30AC006203FB /* LaibanExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaibanExample.entitlements; sourceTree = "<group>"; };
 		DECB6112292234BC00E92078 /* AppAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnalytics.swift; sourceTree = "<group>"; };
 		F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronunciationAdjustments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +104,7 @@
 		0E77B52328D4B49500C3044C /* LaibanExample */ = {
 			isa = PBXGroup;
 			children = (
+				7EBBA7732AFE30AC006203FB /* LaibanExample.entitlements */,
 				F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */,
 				0E77B55528D855E700C3044C /* Info.plist */,
 				0E77B52428D4B49500C3044C /* LaibanExampleApp.swift */,
@@ -409,6 +411,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LaibanExample/LaibanExample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIG = Config;
 				CURRENT_PROJECT_VERSION = 1;
@@ -438,6 +442,7 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laiban.LaibanExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,6 +454,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LaibanExample/LaibanExample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIG = Config;
 				CURRENT_PROJECT_VERSION = 1;
@@ -478,6 +485,7 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laiban.LaibanExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
