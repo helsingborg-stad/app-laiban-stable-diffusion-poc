@@ -34,6 +34,10 @@
 		9C9C5F992AE1523200D7DA6A /* SharedActivities in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F982AE1523200D7DA6A /* SharedActivities */; };
 		9C9C5F9B2AE1523200D7DA6A /* TextAutoCorrector in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F9A2AE1523200D7DA6A /* TextAutoCorrector */; };
 		9C9C5F9D2AE1523200D7DA6A /* UDPipe in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F9C2AE1523200D7DA6A /* UDPipe */; };
+		9CD8131A2B16189800B91F31 /* Laiban in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD813192B16189800B91F31 /* Laiban */; };
+		9CD8131C2B16189800B91F31 /* SharedActivities in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD8131B2B16189800B91F31 /* SharedActivities */; };
+		9CD8131E2B16189800B91F31 /* TextAutoCorrector in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD8131D2B16189800B91F31 /* TextAutoCorrector */; };
+		9CD813202B16189800B91F31 /* UDPipe in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD8131F2B16189800B91F31 /* UDPipe */; };
 		DECB6113292234BC00E92078 /* AppAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB6112292234BC00E92078 /* AppAnalytics.swift */; };
 		F657A01A2940832D0015B3DF /* PronunciationAdjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD8131E2B16189800B91F31 /* TextAutoCorrector in Frameworks */,
 				9C9C5F972AE1523200D7DA6A /* Laiban in Frameworks */,
 				0E77B55128D4F16700C3044C /* Shout in Frameworks */,
 				9C76087B2AD0404000F1F1E4 /* StableDiffusion in Frameworks */,
@@ -68,10 +73,13 @@
 				9C9C5F9B2AE1523200D7DA6A /* TextAutoCorrector in Frameworks */,
 				0E77B54128D4B53E00C3044C /* PublicCalendar in Frameworks */,
 				0E77B53B28D4B53E00C3044C /* AudioSwitchboard in Frameworks */,
+				9CD8131C2B16189800B91F31 /* SharedActivities in Frameworks */,
 				0E77B53F28D4B53E00C3044C /* Meals in Frameworks */,
 				0E77B54928D4B53E00C3044C /* Weather in Frameworks */,
 				0E77B55328D4F1D700C3044C /* MSCognitiveServices in Frameworks */,
 				0E77B53728D4B53E00C3044C /* AppSettings in Frameworks */,
+				9CD8131A2B16189800B91F31 /* Laiban in Frameworks */,
+				9CD813202B16189800B91F31 /* UDPipe in Frameworks */,
 				0E77B54328D4B53E00C3044C /* STT in Frameworks */,
 				9C9C5F992AE1523200D7DA6A /* SharedActivities in Frameworks */,
 				0E77B53928D4B53E00C3044C /* Assistant in Frameworks */,
@@ -188,6 +196,10 @@
 				9C9C5F982AE1523200D7DA6A /* SharedActivities */,
 				9C9C5F9A2AE1523200D7DA6A /* TextAutoCorrector */,
 				9C9C5F9C2AE1523200D7DA6A /* UDPipe */,
+				9CD813192B16189800B91F31 /* Laiban */,
+				9CD8131B2B16189800B91F31 /* SharedActivities */,
+				9CD8131D2B16189800B91F31 /* TextAutoCorrector */,
+				9CD8131F2B16189800B91F31 /* UDPipe */,
 			);
 			productName = LaibanExample;
 			productReference = 0E77B52128D4B49500C3044C /* LaibanExample.app */;
@@ -223,7 +235,7 @@
 				0E77B54C28D4EF8900C3044C /* XCRemoteSwiftPackageReference "spm-ms-cognitive-services" */,
 				9C7608792AD0404000F1F1E4 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
 				7E1632012ADFC87E00066460 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
-				9C9C5F952AE1523200D7DA6A /* XCLocalSwiftPackageReference "../spm-laiban" */,
+				9CD813182B16189800B91F31 /* XCLocalSwiftPackageReference "../spm-laiban" */,
 			);
 			productRefGroup = 0E77B52228D4B49500C3044C /* Products */;
 			projectDirPath = "";
@@ -426,6 +438,7 @@
 				INFOPLIST_KEY_NSLocationUsageDescription = "Hämtar korrdinater";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Hämtar korrdinater";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Används för röstkommandon";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Används för att spara dina genererade bilder";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Används för röstkommandon";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -469,6 +482,7 @@
 				INFOPLIST_KEY_NSLocationUsageDescription = "Hämtar korrdinater";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Hämtar korrdinater";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Används för röstkommandon";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Används för att spara dina genererade bilder";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Används för röstkommandon";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -516,7 +530,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		9C9C5F952AE1523200D7DA6A /* XCLocalSwiftPackageReference "../spm-laiban" */ = {
+		9CD813182B16189800B91F31 /* XCLocalSwiftPackageReference "../spm-laiban" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../spm-laiban";
 		};
@@ -641,6 +655,22 @@
 			productName = TextAutoCorrector;
 		};
 		9C9C5F9C2AE1523200D7DA6A /* UDPipe */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UDPipe;
+		};
+		9CD813192B16189800B91F31 /* Laiban */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Laiban;
+		};
+		9CD8131B2B16189800B91F31 /* SharedActivities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedActivities;
+		};
+		9CD8131D2B16189800B91F31 /* TextAutoCorrector */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TextAutoCorrector;
+		};
+		9CD8131F2B16189800B91F31 /* UDPipe */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UDPipe;
 		};
