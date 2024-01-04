@@ -222,6 +222,8 @@ class AppState : ObservableObject {
             self.translate(items.map { $0.title })
         }.store(in: &cancellables)
         
+        imageGeneratorService.initStartupCheck()
+        
         self.translateAll()
         self.setupCompleted = true
     }
