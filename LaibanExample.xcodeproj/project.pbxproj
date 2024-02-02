@@ -28,8 +28,6 @@
 		0E77B55928D85D3000C3044C /* MyCustomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55828D85D3000C3044C /* MyCustomService.swift */; };
 		0E77B55B28D85D3C00C3044C /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55A28D85D3C00C3044C /* MyCustomView.swift */; };
 		0E77B55D28D85D4D00C3044C /* MyCustomViewIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */; };
-		7E1632032ADFC87E00066460 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1632022ADFC87E00066460 /* ZIPFoundation */; };
-		9C76087B2AD0404000F1F1E4 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 9C76087A2AD0404000F1F1E4 /* StableDiffusion */; };
 		9C9C5F972AE1523200D7DA6A /* Laiban in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F962AE1523200D7DA6A /* Laiban */; };
 		9C9C5F992AE1523200D7DA6A /* SharedActivities in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F982AE1523200D7DA6A /* SharedActivities */; };
 		9C9C5F9B2AE1523200D7DA6A /* TextAutoCorrector in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F9A2AE1523200D7DA6A /* TextAutoCorrector */; };
@@ -67,7 +65,6 @@
 				9CD8131E2B16189800B91F31 /* TextAutoCorrector in Frameworks */,
 				9C9C5F972AE1523200D7DA6A /* Laiban in Frameworks */,
 				0E77B55128D4F16700C3044C /* Shout in Frameworks */,
-				9C76087B2AD0404000F1F1E4 /* StableDiffusion in Frameworks */,
 				0E77B54528D4B53E00C3044C /* TTS in Frameworks */,
 				0E77B53D28D4B53E00C3044C /* Dragoman in Frameworks */,
 				9C9C5F9B2AE1523200D7DA6A /* TextAutoCorrector in Frameworks */,
@@ -85,7 +82,6 @@
 				0E77B53928D4B53E00C3044C /* Assistant in Frameworks */,
 				9C9C5F9D2AE1523200D7DA6A /* UDPipe in Frameworks */,
 				0E77B54728D4B53E00C3044C /* TextTranslator in Frameworks */,
-				7E1632032ADFC87E00066460 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,8 +186,6 @@
 				0E77B54828D4B53E00C3044C /* Weather */,
 				0E77B55028D4F16700C3044C /* Shout */,
 				0E77B55228D4F1D700C3044C /* MSCognitiveServices */,
-				9C76087A2AD0404000F1F1E4 /* StableDiffusion */,
-				7E1632022ADFC87E00066460 /* ZIPFoundation */,
 				9C9C5F962AE1523200D7DA6A /* Laiban */,
 				9C9C5F982AE1523200D7DA6A /* SharedActivities */,
 				9C9C5F9A2AE1523200D7DA6A /* TextAutoCorrector */,
@@ -233,8 +227,6 @@
 			packageReferences = (
 				0E77B53528D4B53E00C3044C /* XCRemoteSwiftPackageReference "spm-daisy" */,
 				0E77B54C28D4EF8900C3044C /* XCRemoteSwiftPackageReference "spm-ms-cognitive-services" */,
-				9C7608792AD0404000F1F1E4 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
-				7E1632012ADFC87E00066460 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 				9CD813182B16189800B91F31 /* XCLocalSwiftPackageReference "../spm-laiban" */,
 			);
 			productRefGroup = 0E77B52228D4B49500C3044C /* Products */;
@@ -553,22 +545,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		7E1632012ADFC87E00066460 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/weichsel/ZIPFoundation";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.17;
-			};
-		};
-		9C7608792AD0404000F1F1E4 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/ml-stable-diffusion#swift-requirements";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -631,16 +607,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E77B54C28D4EF8900C3044C /* XCRemoteSwiftPackageReference "spm-ms-cognitive-services" */;
 			productName = MSCognitiveServices;
-		};
-		7E1632022ADFC87E00066460 /* ZIPFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7E1632012ADFC87E00066460 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
-			productName = ZIPFoundation;
-		};
-		9C76087A2AD0404000F1F1E4 /* StableDiffusion */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9C7608792AD0404000F1F1E4 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
-			productName = StableDiffusion;
 		};
 		9C9C5F962AE1523200D7DA6A /* Laiban */ = {
 			isa = XCSwiftPackageProductDependency;
