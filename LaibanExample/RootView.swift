@@ -18,7 +18,7 @@ struct RootView : View {
         return [
             [a.timeService,         a.calendarService,  a.singalongService,     a.foodService,          a.foodWasteService          ],
             [a.outdoorsService,     a.movementService,  a.recreationService,    a.activityService,      a.instagramService          ],
-            [a.memoryGameService,   a.undpService,      a.trashMonsterService,  a.noticeboardService,   a.imageGeneratorService           ]
+            [a.memoryGameService,   a.undpService,      a.trashMonsterService,  a.noticeboardService,   a.imageGeneratorService.dashboard           ]
         ]
     }
     var config: LBRootViewConfig {
@@ -74,7 +74,7 @@ struct RootView : View {
                 case LBViewIdentity.trashmonster:    TrashMontersView()
                 case LBViewIdentity.undpinfo:        UNDPInfoView()
                 case LBViewIdentity.home:            HomeView(publicCalendar: appState.publicCalendar, activityService: appState.activityService)
-                case LBViewIdentity.imageGenerator:  ImageGeneratorView(service: appState.imageGeneratorService)
+                case LBViewIdentity.imageGenerator:  ImageGeneratorView(service: appState.imageGeneratorService.service)
 //                case LBViewIdentity.movement:        MovementView(service: appState.movementService)      // Disabled and waiting for feedback from test users.
 //                case LBViewIdentity.myCustomService: MyCustomView()
                 default: EmptyView()

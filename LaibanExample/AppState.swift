@@ -50,7 +50,7 @@ class AppState : ObservableObject {
     var returnToHomeScreenService = ReturnToHomeScreenService()
     var movementService = MovementService()
     var appAnalytics = AppAnalytics()
-    var imageGeneratorService = ImageGeneratorService()
+    var imageGeneratorService = ImageGeneratorServiceFactory.GetService()
     
     // App specific services
     var myCustomService = MyCustomService()
@@ -72,7 +72,7 @@ class AppState : ObservableObject {
             returnToHomeScreenService,
             movementService,
             recreationService,
-            imageGeneratorService
+            imageGeneratorService.admin
         ]
     }
     private var cancellables = Set<AnyCancellable>()
@@ -222,7 +222,7 @@ class AppState : ObservableObject {
             self.translate(items.map { $0.title })
         }.store(in: &cancellables)
         
-        imageGeneratorService.initStartupCheck()
+        imageGeneratorService.service.initStartupCheck()
         
         self.translateAll()
         self.setupCompleted = true
