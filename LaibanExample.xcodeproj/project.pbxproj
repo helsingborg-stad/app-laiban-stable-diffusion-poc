@@ -425,7 +425,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LaibanExample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "L[AI]ban";
+				INFOPLIST_KEY_CFBundleDisplayName = "L[AI]ban exempelapp";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Internet access";
 				INFOPLIST_KEY_NSLocationUsageDescription = "Hämtar korrdinater";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Hämtar korrdinater";
@@ -444,8 +444,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.laiban.LaibanExample;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = se.helsingborg.laiban.LaibanExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -469,7 +469,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LaibanExample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "L[AI]ban";
+				INFOPLIST_KEY_CFBundleDisplayName = "L[AI]ban exempelapp";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Internet access";
 				INFOPLIST_KEY_NSLocationUsageDescription = "Hämtar korrdinater";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Hämtar korrdinater";
@@ -488,8 +488,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.laiban.LaibanExample;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = se.helsingborg.laiban.LaibanExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
