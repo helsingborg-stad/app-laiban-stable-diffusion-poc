@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,14 +28,14 @@
 		0E77B55928D85D3000C3044C /* MyCustomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55828D85D3000C3044C /* MyCustomService.swift */; };
 		0E77B55B28D85D3C00C3044C /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55A28D85D3C00C3044C /* MyCustomView.swift */; };
 		0E77B55D28D85D4D00C3044C /* MyCustomViewIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77B55C28D85D4D00C3044C /* MyCustomViewIcon.swift */; };
-		9C9C5F972AE1523200D7DA6A /* Laiban in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F962AE1523200D7DA6A /* Laiban */; };
-		9C9C5F992AE1523200D7DA6A /* SharedActivities in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F982AE1523200D7DA6A /* SharedActivities */; };
-		9C9C5F9B2AE1523200D7DA6A /* TextAutoCorrector in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F9A2AE1523200D7DA6A /* TextAutoCorrector */; };
-		9C9C5F9D2AE1523200D7DA6A /* UDPipe in Frameworks */ = {isa = PBXBuildFile; productRef = 9C9C5F9C2AE1523200D7DA6A /* UDPipe */; };
-		9CD8131A2B16189800B91F31 /* Laiban in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD813192B16189800B91F31 /* Laiban */; };
-		9CD8131C2B16189800B91F31 /* SharedActivities in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD8131B2B16189800B91F31 /* SharedActivities */; };
-		9CD8131E2B16189800B91F31 /* TextAutoCorrector in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD8131D2B16189800B91F31 /* TextAutoCorrector */; };
-		9CD813202B16189800B91F31 /* UDPipe in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD8131F2B16189800B91F31 /* UDPipe */; };
+		7E1968CB2B975D1600859727 /* Laiban in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1968CA2B975D1600859727 /* Laiban */; };
+		7E1968CD2B975D1600859727 /* SharedActivities in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1968CC2B975D1600859727 /* SharedActivities */; };
+		7E1968CF2B975D1600859727 /* TextAutoCorrector in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1968CE2B975D1600859727 /* TextAutoCorrector */; };
+		7E1968D12B975D1600859727 /* UDPipe in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1968D02B975D1600859727 /* UDPipe */; };
+		7E536A7A2B976D2C001F8054 /* Laiban in Frameworks */ = {isa = PBXBuildFile; productRef = 7E536A792B976D2C001F8054 /* Laiban */; };
+		7E536A7C2B976D2C001F8054 /* SharedActivities in Frameworks */ = {isa = PBXBuildFile; productRef = 7E536A7B2B976D2C001F8054 /* SharedActivities */; };
+		7E536A7E2B976D2C001F8054 /* TextAutoCorrector in Frameworks */ = {isa = PBXBuildFile; productRef = 7E536A7D2B976D2C001F8054 /* TextAutoCorrector */; };
+		7E536A802B976D2C001F8054 /* UDPipe in Frameworks */ = {isa = PBXBuildFile; productRef = 7E536A7F2B976D2C001F8054 /* UDPipe */; };
 		DECB6113292234BC00E92078 /* AppAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB6112292234BC00E92078 /* AppAnalytics.swift */; };
 		F657A01A2940832D0015B3DF /* PronunciationAdjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657A0192940832D0015B3DF /* PronunciationAdjustments.swift */; };
 /* End PBXBuildFile section */
@@ -62,25 +62,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CD8131E2B16189800B91F31 /* TextAutoCorrector in Frameworks */,
-				9C9C5F972AE1523200D7DA6A /* Laiban in Frameworks */,
+				7E1968CD2B975D1600859727 /* SharedActivities in Frameworks */,
+				7E1968CB2B975D1600859727 /* Laiban in Frameworks */,
 				0E77B55128D4F16700C3044C /* Shout in Frameworks */,
 				0E77B54528D4B53E00C3044C /* TTS in Frameworks */,
 				0E77B53D28D4B53E00C3044C /* Dragoman in Frameworks */,
-				9C9C5F9B2AE1523200D7DA6A /* TextAutoCorrector in Frameworks */,
+				7E536A802B976D2C001F8054 /* UDPipe in Frameworks */,
 				0E77B54128D4B53E00C3044C /* PublicCalendar in Frameworks */,
+				7E536A7A2B976D2C001F8054 /* Laiban in Frameworks */,
+				7E1968CF2B975D1600859727 /* TextAutoCorrector in Frameworks */,
+				7E536A7C2B976D2C001F8054 /* SharedActivities in Frameworks */,
 				0E77B53B28D4B53E00C3044C /* AudioSwitchboard in Frameworks */,
-				9CD8131C2B16189800B91F31 /* SharedActivities in Frameworks */,
 				0E77B53F28D4B53E00C3044C /* Meals in Frameworks */,
 				0E77B54928D4B53E00C3044C /* Weather in Frameworks */,
+				7E536A7E2B976D2C001F8054 /* TextAutoCorrector in Frameworks */,
 				0E77B55328D4F1D700C3044C /* MSCognitiveServices in Frameworks */,
 				0E77B53728D4B53E00C3044C /* AppSettings in Frameworks */,
-				9CD8131A2B16189800B91F31 /* Laiban in Frameworks */,
-				9CD813202B16189800B91F31 /* UDPipe in Frameworks */,
 				0E77B54328D4B53E00C3044C /* STT in Frameworks */,
-				9C9C5F992AE1523200D7DA6A /* SharedActivities in Frameworks */,
+				7E1968D12B975D1600859727 /* UDPipe in Frameworks */,
 				0E77B53928D4B53E00C3044C /* Assistant in Frameworks */,
-				9C9C5F9D2AE1523200D7DA6A /* UDPipe in Frameworks */,
 				0E77B54728D4B53E00C3044C /* TextTranslator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,14 +186,14 @@
 				0E77B54828D4B53E00C3044C /* Weather */,
 				0E77B55028D4F16700C3044C /* Shout */,
 				0E77B55228D4F1D700C3044C /* MSCognitiveServices */,
-				9C9C5F962AE1523200D7DA6A /* Laiban */,
-				9C9C5F982AE1523200D7DA6A /* SharedActivities */,
-				9C9C5F9A2AE1523200D7DA6A /* TextAutoCorrector */,
-				9C9C5F9C2AE1523200D7DA6A /* UDPipe */,
-				9CD813192B16189800B91F31 /* Laiban */,
-				9CD8131B2B16189800B91F31 /* SharedActivities */,
-				9CD8131D2B16189800B91F31 /* TextAutoCorrector */,
-				9CD8131F2B16189800B91F31 /* UDPipe */,
+				7E1968CA2B975D1600859727 /* Laiban */,
+				7E1968CC2B975D1600859727 /* SharedActivities */,
+				7E1968CE2B975D1600859727 /* TextAutoCorrector */,
+				7E1968D02B975D1600859727 /* UDPipe */,
+				7E536A792B976D2C001F8054 /* Laiban */,
+				7E536A7B2B976D2C001F8054 /* SharedActivities */,
+				7E536A7D2B976D2C001F8054 /* TextAutoCorrector */,
+				7E536A7F2B976D2C001F8054 /* UDPipe */,
 			);
 			productName = LaibanExample;
 			productReference = 0E77B52128D4B49500C3044C /* LaibanExample.app */;
@@ -227,7 +227,7 @@
 			packageReferences = (
 				0E77B53528D4B53E00C3044C /* XCRemoteSwiftPackageReference "spm-daisy" */,
 				0E77B54C28D4EF8900C3044C /* XCRemoteSwiftPackageReference "spm-ms-cognitive-services" */,
-				9CD813182B16189800B91F31 /* XCLocalSwiftPackageReference "../spm-laiban" */,
+				7E536A782B976D2C001F8054 /* XCRemoteSwiftPackageReference "spm-laiban" */,
 			);
 			productRefGroup = 0E77B52228D4B49500C3044C /* Products */;
 			projectDirPath = "";
@@ -344,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -400,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -521,13 +521,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		9CD813182B16189800B91F31 /* XCLocalSwiftPackageReference "../spm-laiban" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../spm-laiban";
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		0E77B53528D4B53E00C3044C /* XCRemoteSwiftPackageReference "spm-daisy" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -543,6 +536,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
+			};
+		};
+		7E536A782B976D2C001F8054 /* XCRemoteSwiftPackageReference "spm-laiban" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/helsingborg-stad/spm-laiban/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -608,36 +609,40 @@
 			package = 0E77B54C28D4EF8900C3044C /* XCRemoteSwiftPackageReference "spm-ms-cognitive-services" */;
 			productName = MSCognitiveServices;
 		};
-		9C9C5F962AE1523200D7DA6A /* Laiban */ = {
+		7E1968CA2B975D1600859727 /* Laiban */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Laiban;
 		};
-		9C9C5F982AE1523200D7DA6A /* SharedActivities */ = {
+		7E1968CC2B975D1600859727 /* SharedActivities */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SharedActivities;
 		};
-		9C9C5F9A2AE1523200D7DA6A /* TextAutoCorrector */ = {
+		7E1968CE2B975D1600859727 /* TextAutoCorrector */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TextAutoCorrector;
 		};
-		9C9C5F9C2AE1523200D7DA6A /* UDPipe */ = {
+		7E1968D02B975D1600859727 /* UDPipe */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UDPipe;
 		};
-		9CD813192B16189800B91F31 /* Laiban */ = {
+		7E536A792B976D2C001F8054 /* Laiban */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 7E536A782B976D2C001F8054 /* XCRemoteSwiftPackageReference "spm-laiban" */;
 			productName = Laiban;
 		};
-		9CD8131B2B16189800B91F31 /* SharedActivities */ = {
+		7E536A7B2B976D2C001F8054 /* SharedActivities */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 7E536A782B976D2C001F8054 /* XCRemoteSwiftPackageReference "spm-laiban" */;
 			productName = SharedActivities;
 		};
-		9CD8131D2B16189800B91F31 /* TextAutoCorrector */ = {
+		7E536A7D2B976D2C001F8054 /* TextAutoCorrector */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 7E536A782B976D2C001F8054 /* XCRemoteSwiftPackageReference "spm-laiban" */;
 			productName = TextAutoCorrector;
 		};
-		9CD8131F2B16189800B91F31 /* UDPipe */ = {
+		7E536A7F2B976D2C001F8054 /* UDPipe */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 7E536A782B976D2C001F8054 /* XCRemoteSwiftPackageReference "spm-laiban" */;
 			productName = UDPipe;
 		};
 /* End XCSwiftPackageProductDependency section */

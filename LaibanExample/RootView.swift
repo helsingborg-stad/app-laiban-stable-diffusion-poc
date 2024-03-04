@@ -10,45 +10,20 @@ import Combine
 import Assistant
 import Laiban
 
-@available(iOS 16.2, *)
+@available(iOS 15.0 , *)
 struct RootView : View {
     @EnvironmentObject var appState:AppState
-    var dashboardLayout:[[LBDashboardItem]] {
-        let a = appState
-        return [
-            [a.timeService,         a.calendarService,  a.singalongService,     a.foodService,          a.foodWasteService          ],
-            [a.outdoorsService,     a.movementService,  a.recreationService,    a.activityService,      a.instagramService          ],
-            [a.memoryGameService,   a.undpService,      a.trashMonsterService,  a.noticeboardService,   a.imageGeneratorService.dashboard           ]
-        ]
-    }
+    
     var config: LBRootViewConfig {
         .init(
-            dashboardItems: dashboardLayout,
+            dashboardItems: appState.dashboardLayout,
             adminServices: appState.adminServices
         )
     }
     var body: some View {
         LBRootView(config: config)
             .icon { item in
-                switch item {
-                case LBViewIdentity.time:            TimeHomeViewIcon()
-                case LBViewIdentity.activities:      ActivitiesHomeViewIcon()
-                case LBViewIdentity.outdoors:        OutdoorsHomeViewIcon(service: appState.outdoorsService)
-                case LBViewIdentity.food:            FoodHomeViewIcon()
-                case LBViewIdentity.foodwaste:       FoodWasteHomeViewIcon()
-                case LBViewIdentity.singalong:       SingalongHomeViewIcon()
-                case LBViewIdentity.calendar:        CalendarHomeViewIcon()
-                case LBViewIdentity.instagram:       InstagramHomeViewIcon()
-                case LBViewIdentity.recreation:      RecreationHomeViewIcon()
-                case LBViewIdentity.memory:          MemoryHomeViewIcon()
-                case LBViewIdentity.trashmonster:    TrashMonstersHomeViewIcon()
-                case LBViewIdentity.noticeboard:     NoticeboardHomeViewIcon()
-                case LBViewIdentity.undpinfo:        UNDPHomeViewIcon()
-                case LBViewIdentity.imageGenerator:  ImageGeneratorViewIcon()
-//                case LBViewIdentity.movement:        MovementHomeViewIcon()       // Disabled and waiting for feedback from test users.
-//                case LBViewIdentity.myCustomService: MyCustomViewIcon()
-                default: EmptyView()
-                }
+                AppState.DashboardItemIcon(appState: appState, item: item)
             }
             .actionBar { item, properties in
                 switch item {
